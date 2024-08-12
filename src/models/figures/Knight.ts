@@ -16,6 +16,12 @@ export class Knight extends Figure {
         // check if the target cell is valid for the move
         if (!super.canMove(target))
             return false;
-        return true;
+
+        // get the difference between the current cell and the target cell
+        const dx = Math.abs(this.cell.x - target.x);
+        const dy = Math.abs(this.cell.y - target.y);
+
+        // check the offsets (1 offset for 1 axis and 2 offset for the other axis)
+        return (dx === 1 && dy === 2) || (dx === 2 && dy === 1);
     }
 }
