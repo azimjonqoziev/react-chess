@@ -10,4 +10,14 @@ export class Bishop extends Figure {
         this.logo = color === Colors.BLACK ? blackLogo : whiteLogo;
         this.name = FigureNames.BISHOP;
     }
+
+    // determines the corresponding move logic of this figure
+    canMove(target: Cell): boolean {
+        // check if the target cell is valid for the move
+        if (!super.canMove(target))
+            return false;
+        if (this.cell.isEmptyDiagonal(target))
+            return true;
+        return true;
+    }
 }

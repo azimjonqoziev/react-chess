@@ -28,9 +28,16 @@ export class Figure {
         this.id = Math.random();
     }
 
+    // determines the move logic of the figures
     canMove(target: Cell): boolean { 
+        // check the colors of the target figures since you can't capture your own figures
+        if (target.figure?.color === this.color)
+            return false;
+        // cehck if the target figure is NOT KING since you can't capture the KING
+        if (target.figure?.name === FigureNames.KING)  
+            return false;
         return true;
-    }
+    }   // the rest of the move logic is determined in the corresponding classes of each figure because each figure has a different move logic
 
     moveFigure(target: Cell) { 
         
