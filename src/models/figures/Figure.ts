@@ -3,13 +3,13 @@ import logo from '../../assets/black-king.png'
 import { Cell } from "../Cell";
 
 export enum FigureNames {
-    FIGURE = "figure",
-    KING = "king",
-    KNIGHT = "knight",
-    PAWN = "pawn",
-    QUEEN = "queen",
-    ROOK = "rook",
-    BISHOP = "bishop"
+    FIGURE = "Figure",
+    KING = "King",
+    KNIGHT = "Knight",
+    PAWN = "Pawn",
+    QUEEN = "Queen",
+    ROOK = "Rook",
+    BISHOP = "Bishop"
 }
 
 export class Figure { 

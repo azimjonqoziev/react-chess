@@ -46,6 +46,7 @@ export class Pawn extends Figure {
             && this.cell.isEnemy(target)) {
             return true;
         }
+        
         return false;
     }
 
